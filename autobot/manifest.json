@@ -1,0 +1,49 @@
+{
+  "name": "bot 1",
+  "version": "1.0.0",
+  "description": "Add to cart auto in shop 1",
+  "author": "speedjudy928@gmail.com",
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "storage",
+    "tabs",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sklep.tauron.pl/*"
+      ],
+      "js": [
+        "src/jquery-3.5.1.min.js",
+        "src/content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "models/*, images/*, src/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://www.apostosparaganhar.com/centros.php/;"
+  },
+  "manifest_version": 3
+}
