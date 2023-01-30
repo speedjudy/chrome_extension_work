@@ -1,0 +1,106 @@
+<!-- Navigation -->
+<style>
+	nav {
+		display: flex;
+	}
+
+	#auth_nav {
+		margin-left: auto;
+		padding-right: 5px;
+	}
+
+	#auth_nav > a {
+		color: #777;
+		line-height: 20px;
+		position: relative;
+		display: block;
+		padding: 5px 15px;
+	}
+</style>
+<nav class="navbar navbar-default disabled" role="navigation">
+	<ul class="nav navbar-nav">
+		<li><a id="projects-nav-button" data-i18n="projects_nav_button"></a></li>
+		<li>
+			<a id="sitemaps-nav-button" class="disabled">
+				<span data-i18n="sitemaps_nav_button"></span>
+				<span id="navbar-active-project-id"></span>
+			</a>
+		</li>
+		<li>
+			<a id="sitemap-nav-button" class="dropdown-toggle disabled" data-toggle="dropdown">
+				<span data-i18n="sitemap_nav_button"></span>
+				<span id="navbar-active-sitemap-id"></span>
+				<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a
+						id="sitemap-selector-list-nav-button"
+						data-i18n="sitemap_selector_list_nav_button"
+					></a>
+				</li>
+				<li>
+					<a
+						id="sitemap-selector-graph-nav-button"
+						data-i18n="sitemap_selector_graph_nav_button"
+					></a>
+				</li>
+				<li>
+					<a
+						id="sitemap-edit-metadata-nav-button"
+						data-i18n="sitemap_edit_metadata_nav_button"
+					></a>
+				</li>
+				<li>
+					<a id="sitemap-scrape-nav-button" data-i18n="sitemap_scrape_nav_button"></a>
+				</li>
+				<li>
+					<a id="sitemap-browse-nav-button" data-i18n="sitemap_browse_nav_button"></a>
+				</li>
+				<li>
+					<a id="sitemap-export-nav-button" data-i18n="sitemap_export_nav_button"></a>
+				</li>
+				<li>
+					<a
+						id="sitemap-export-data-nav-button"
+						data-i18n="sitemap_export_data_nav_button"
+					></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a id="create-sitemap-nav-button" class="dropdown-toggle" data-toggle="dropdown">
+				<span data-i18n="create_sitemap_nav_button"></span>
+				<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a
+						id="create-sitemap-create-nav-button"
+						data-i18n="create_sitemap_create_nav_button"
+					></a>
+				</li>
+				<li>
+					<a
+						id="create-sitemap-import-nav-button"
+						data-i18n="create_sitemap_import_nav_button"
+					></a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="nav navbar-nav auth_nav dropdown" id="auth_nav">
+		<a id="user_name" class="dropdown-toggle" data-toggle="dropdown">
+			<span id="user-name"></span>
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a id="logout-nav-button" data-i18n="logout_nav_button"></a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div id="messages"></div>
+<div id="viewport"></div>
